@@ -308,7 +308,7 @@ static NSString *const SLKTextViewGenericFormattingSelectorPrefix = @"slk_format
     return types;
 }
 
-NSString *NSStringFromSLKPastableMediaType(SLKPastableMediaType type)
+inline NSString *NSStringFromSLKPastableMediaType(SLKPastableMediaType type)
 {
     if (type == SLKPastableMediaTypePNG) {
         return @"public.png";
@@ -335,7 +335,7 @@ NSString *NSStringFromSLKPastableMediaType(SLKPastableMediaType type)
     return nil;
 }
 
-SLKPastableMediaType SLKPastableMediaTypeFromNSString(NSString *string)
+inline SLKPastableMediaType SLKPastableMediaTypeFromNSString(NSString *string)
 {
     if ([string isEqualToString:NSStringFromSLKPastableMediaType(SLKPastableMediaTypePNG)]) {
         return SLKPastableMediaTypePNG;
